@@ -3,622 +3,625 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSimple AI - Simple Websites for Local Contractors</title>
-    <meta name="description" content="Professional 5-page websites for contractors built in 48 hours. $750 one-time payment. No monthly fees.">
+    <meta name="description" content="WebSimple AI - Professional websites for small businesses in 24 hours. No hassle, no technical skills required.">
+    <title>websimple ai - professional websites in 24 hours</title>
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --border: #e0e0e0;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--black);
+            background: var(--white);
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
+        
         /* Header */
         header {
-            background: #fff;
-            padding: 20px 0;
-            border-bottom: 1px solid #e5e5e5;
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border);
         }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #2563eb;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-bottom: 30px;
-            opacity: 0.95;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background: #fff;
-            color: #667eea;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-
-        .trust-line {
-            margin-top: 20px;
-            font-size: 16px;
-            opacity: 0.9;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 80px 0;
-        }
-
-        section h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        section p {
-            font-size: 18px;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 40px;
-            color: #666;
-        }
-
-        /* Problem Section */
-        .problem {
-            background: #f9fafb;
-        }
-
-        .problem-list {
-            max-width: 600px;
-            margin: 40px auto;
-            list-style: none;
-        }
-
-        .problem-list li {
-            padding: 15px 15px 15px 50px;
-            margin-bottom: 15px;
-            background: white;
-            border-radius: 8px;
-            position: relative;
-            font-size: 18px;
-        }
-
-        .problem-list li:before {
-            content: "✗";
-            position: absolute;
-            left: 20px;
-            color: #ef4444;
-            font-weight: 700;
-            font-size: 20px;
-        }
-
-        /* Solution Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        .feature-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-            color: #2563eb;
-        }
-
-        .feature-card ul {
-            list-style: none;
-        }
-
-        .feature-card li {
-            padding: 8px 0 8px 25px;
-            position: relative;
-        }
-
-        .feature-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: 700;
-        }
-
-        /* How It Works */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
-        }
-
-        .step {
-            text-align: center;
-        }
-
-        .step-number {
-            display: inline-block;
-            width: 60px;
-            height: 60px;
-            background: #2563eb;
-            color: white;
-            border-radius: 50%;
-            line-height: 60px;
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .step h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .step p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        /* Pricing */
-        .pricing {
-            background: #f9fafb;
-        }
-
-        .price-box {
-            max-width: 500px;
+        
+        nav {
+            max-width: 1400px;
             margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--black);
+            text-transform: lowercase;
+        }
+        
+        .logo span {
+            font-weight: 300;
+        }
+        
+        .nav-link {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-link:hover {
+            opacity: 0.6;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 5% 80px;
             text-align: center;
         }
-
-        .price {
-            font-size: 56px;
-            font-weight: 700;
-            color: #2563eb;
-            margin-bottom: 10px;
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-transform: lowercase;
         }
-
-        .price-subtitle {
-            font-size: 18px;
-            color: #666;
-            margin-bottom: 30px;
+        
+        .hero h1 strong {
+            font-weight: 600;
         }
-
-        .price-box ul {
+        
+        /* Chat Box */
+        .chat-box {
+            max-width: 500px;
+            margin: 3rem auto 0;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
             text-align: left;
-            list-style: none;
-            margin-bottom: 30px;
         }
-
-        .price-box li {
-            padding: 12px 0 12px 30px;
-            position: relative;
-            font-size: 16px;
-        }
-
-        .price-box li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #10b981;
-            font-weight: 700;
-            font-size: 18px;
-        }
-
-        /* Who It's For */
-        .industries {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 50px;
-        }
-
-        .industry {
-            background: #f0f4ff;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
+        
+        .chat-header {
+            font-size: 1.1rem;
             font-weight: 500;
-            font-size: 16px;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
         }
-
-        /* Examples */
-        .examples {
-            background: #f9fafb;
+        
+        /* Trust Section */
+        .trust-section {
+            padding: 60px 5%;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
-
-        .examples-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 50px;
+        
+        .trust-text {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
-        .example-card {
-            background: white;
-            border-radius: 12px;
+        
+        .logo-scroll {
             overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            position: relative;
         }
-
-        .example-img {
+        
+        .logo-track {
+            display: flex;
+            gap: 4rem;
+            animation: scroll 30s linear infinite;
+        }
+        
+        .logo-item {
+            font-size: 1.2rem;
+            color: var(--gray);
+            white-space: nowrap;
+            font-weight: 500;
+        }
+        
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            padding: 120px 5%;
+        }
+        
+        .stats-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .stats-header h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+        
+        .stats-header p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-transform: lowercase;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 5rem;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-transform: lowercase;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 120px 5%;
+            background: var(--light-gray);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 4rem;
+            text-transform: lowercase;
+        }
+        
+        .features-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .feature-item:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: lowercase;
+        }
+        
+        .feature-content p {
+            color: var(--gray);
+            line-height: 1.7;
+            text-transform: lowercase;
+        }
+        
+        /* Portfolio Section */
+        .portfolio-section {
+            padding: 120px 5%;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-item {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .portfolio-image {
             width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 300px;
+            background: var(--light-gray);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 18px;
+            font-size: 3rem;
+        }
+        
+        .portfolio-info {
+            padding: 1.5rem;
+        }
+        
+        .portfolio-info h3 {
+            font-size: 1.2rem;
             font-weight: 500;
+            margin-bottom: 0.5rem;
+            text-transform: lowercase;
         }
-
-        .example-content {
-            padding: 25px;
+        
+        .portfolio-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            text-transform: lowercase;
         }
-
-        .example-content h3 {
-            font-size: 22px;
-            margin-bottom: 10px;
+        
+        /* Testimonials */
+        .testimonials-section {
+            padding: 120px 5%;
+            background: var(--light-gray);
         }
-
-        .example-content a {
-            color: #2563eb;
-            text-decoration: none;
-            font-size: 14px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .example-content p {
-            font-size: 14px;
-            color: #666;
-            text-align: left;
-        }
-
-        /* FAQ */
-        .faq-list {
+        
+        .testimonial-item {
             max-width: 800px;
-            margin: 50px auto 0;
-        }
-
-        .faq-item {
-            background: white;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .faq-item h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
-            color: #2563eb;
-        }
-
-        .faq-item p {
-            font-size: 16px;
-            color: #666;
-            text-align: left;
-        }
-
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            margin: 0 auto 4rem;
             text-align: center;
         }
-
-        .final-cta h2 {
-            color: white;
+        
+        .testimonial-quote {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 300;
         }
-
-        .final-cta p {
-            color: white;
-            opacity: 0.95;
+        
+        .testimonial-author {
+            font-size: 1rem;
+            color: var(--gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        
+        .cta-section h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            text-transform: lowercase;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            text-transform: lowercase;
+        }
+        
+        .cta-btn:hover {
+            opacity: 0.8;
+        }
+        
         /* Footer */
         footer {
-            background: #1f2937;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
+            padding: 3rem 5%;
+            border-top: 1px solid var(--border);
         }
-
-        footer a {
-            color: #60a5fa;
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: lowercase;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .footer-link {
+            color: var(--gray);
             text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            text-transform: lowercase;
         }
-
-        /* Responsive */
+        
+        .footer-link:hover {
+            color: var(--black);
+        }
+        
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 2.5rem;
             }
-
-            .hero p {
-                font-size: 18px;
+            
+            .chat-box {
+                padding: 1rem;
             }
-
-            section h2 {
-                font-size: 28px;
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
             }
-
-            .price {
-                font-size: 42px;
+            
+            .stat-number {
+                font-size: 3.5rem;
             }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="container">
-            <div class="logo">WebSimple AI</div>
-        </div>
+        <nav>
+            <div class="logo">websimple<span>ai</span></div>
+            <a href="#examples" class="nav-link">examples</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <h1>Simple Websites for Small Business Owners<br>Built in Minutes, not Days</h1>
-            <p style="color: white;">Professional websites for small business owners and professionals who need to get online fast—without the hassle or high costs.</p>
-            <a href="https://tally.so/r/D4qvQp" class="cta-button">Get Your Website →</a>
-            <div class="trust-line">$750 one-time payment • No monthly fees • No technical skills needed</div>
+        <h1>your business deserves a <strong>real website</strong>. get one in 24 hours.</h1>
+        
+        <div class="chat-box">
+            <div class="chat-header">💬 get started</div>
+            <iframe data-tally-src="https://tally.so/embed/zxNoDq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="websites built fast"></iframe>
         </div>
     </section>
 
-    <!-- Problem Section -->
-    <section class="problem">
-        <div class="container">
-            <h2>You Need a Website. But You Don't Have Time for This.</h2>
-            <p>Most web designers want things you don't have:</p>
-            <ul class="problem-list">
-                <li>Weeks of back-and-forth meetings</li>
-                <li>$3,000-$5,000 upfront</li>
-                <li>Monthly fees that never end</li>
-                <li>You to write all your own content</li>
-            </ul>
-            <p style="margin-top: 30px; font-weight: 600; color: #333;">We get it. You're running a business, not learning WordPress.</p>
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="trust-text">trusted by small businesses</div>
+        <div class="logo-scroll">
+            <div class="logo-track">
+                <div class="logo-item">🔨 contractors</div>
+                <div class="logo-item">⚡ electricians</div>
+                <div class="logo-item">🔧 plumbers</div>
+                <div class="logo-item">🏠 real estate</div>
+                <div class="logo-item">💼 consultants</div>
+                <div class="logo-item">🍽️ restaurants</div>
+                <div class="logo-item">💇 salons</div>
+                <div class="logo-item">🏋️ gyms</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="logo-item">🔨 contractors</div>
+                <div class="logo-item">⚡ electricians</div>
+                <div class="logo-item">🔧 plumbers</div>
+                <div class="logo-item">🏠 real estate</div>
+                <div class="logo-item">💼 consultants</div>
+                <div class="logo-item">🍽️ restaurants</div>
+                <div class="logo-item">💇 salons</div>
+                <div class="logo-item">🏋️ gyms</div>
+            </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section class="solution">
-        <div class="container">
-            <h2>What You Get With WebSimple</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>5 Professional Pages</h3>
-                    <ul>
-                        <li>Home - Make the right first impression</li>
-                        <li>About - Tell your story, build trust</li>
-                        <li>Services - Show what you do</li>
-                        <li>Gallery - Display your best work</li>
-                        <li>Contact - Make it easy to reach you</li>
-                    </ul>
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-header">
+            <h2>the numbers</h2>
+            <p>we improve your online presence</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">24hrs</div>
+                <div class="stat-label">average launch time</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">$0</div>
+                <div class="stat-label">setup fee this week</div>
+            </div>
+            
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">mobile responsive</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <h2 class="section-title">what you get</h2>
+        
+        <div class="features-list">
+            <div class="feature-item">
+                <div class="feature-icon">📱</div>
+                <div class="feature-content">
+                    <h3>mobile responsive design</h3>
+                    <p>looks perfect on every device—phone, tablet, or desktop</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Everything Included</h3>
-                    <ul>
-                        <li>Mobile-friendly design</li>
-                        <li>Contact form to your email</li>
-                        <li>Google Maps integration</li>
-                        <li>Professional stock photos</li>
-                        <li>Fast loading speed</li>
-                        <li>Domain setup help</li>
-                    </ul>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-content">
+                    <h3>SEO optimized</h3>
+                    <p>built to rank on google from day one</p>
                 </div>
-                <div class="feature-card">
-                    <h3>Fast Delivery</h3>
-                    <ul>
-                        <li>Form submitted today</li>
-                        <li>Website live in 48 hours</li>
-                        <li>One round of revisions included</li>
-                        <li>Launch when you're ready</li>
-                    </ul>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-content">
+                    <h3>lightning fast</h3>
+                    <p>loads in under 1 second to keep customers engaged</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-content">
+                    <h3>secure & safe</h3>
+                    <p>SSL encryption and security built-in</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">📧</div>
+                <div class="feature-content">
+                    <h3>lead capture forms</h3>
+                    <p>turn visitors into customers with optimized contact forms</p>
+                </div>
+            </div>
+            
+            <div class="feature-item">
+                <div class="feature-icon">✏️</div>
+                <div class="feature-content">
+                    <h3>easy updates</h3>
+                    <p>request changes anytime—we handle everything</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2>How It Works</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Fill Out Our Simple Form</h3>
-                    <p>Tell us about your business—what you do, where you work, and what makes you different. Takes 10 minutes.</p>
+    <!-- Portfolio -->
+    <section id="examples" class="portfolio-section">
+        <h2 class="section-title">see what we've built</h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-image">🏗️</div>
+                <div class="portfolio-info">
+                    <h3>skulski & sons builders</h3>
+                    <p>construction & remodeling</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>We Build Your Site</h3>
-                    <p>Our AI-powered system creates your professional website while you focus on your actual work.</p>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">⚡</div>
+                <div class="portfolio-info">
+                    <h3>coming soon</h3>
+                    <p>electrical services</p>
                 </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>You're Live</h3>
-                    <p>Get your website link in 48 hours. Request changes if needed. Launch when you're ready.</p>
+            </div>
+            
+            <div class="portfolio-item">
+                <div class="portfolio-image">🔧</div>
+                <div class="portfolio-info">
+                    <h3>coming soon</h3>
+                    <p>plumbing services</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <h2>Simple Pricing. No Surprises.</h2>
-            <div class="price-box">
-                <div class="price">$750</div>
-                <div class="price-subtitle">One-Time Payment</div>
-                <ul>
-                    <li>5 professional pages</li>
-                    <li>Mobile-friendly design</li>
-                    <li>Contact form setup</li>
-                    <li>1 round of revisions</li>
-                    <li>Domain connection help</li>
-                    <li>48-hour delivery</li>
-                </ul>
-                <a href="https://tally.so/r/D4qvQp" class="cta-button">Get Started Now →</a>
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="testimonial-item">
+            <div class="testimonial-quote">
+                "we went from no online presence to getting 3-4 leads per week. the website paid for itself in the first month."
             </div>
+            <div class="testimonial-author">local contractor</div>
+        </div>
+        
+        <div class="testimonial-item">
+            <div class="testimonial-quote">
+                "i was shocked at how fast and easy it was. submitted my info on monday, had my website live by wednesday."
+            </div>
+            <div class="testimonial-author">professional services</div>
         </div>
     </section>
 
-    <!-- Who It's For -->
-    <section class="who-its-for">
-        <div class="container">
-            <h2>Perfect For These Local Businesses</h2>
-            <div class="industries">
-                <div class="industry">Landscaping & Lawn Care</div>
-                <div class="industry">Roofing Contractors</div>
-                <div class="industry">Plumbing Services</div>
-                <div class="industry">HVAC Companies</div>
-                <div class="industry">Electricians</div>
-                <div class="industry">Painting Contractors</div>
-                <div class="industry">General Contractors</div>
-                <div class="industry">Tree Services</div>
-                <div class="industry">Concrete & Masonry</div>
-                <div class="industry">Window Installation</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Examples -->
-    <section class="examples">
-        <div class="container">
-            <h2>See What You Get</h2>
-            <div class="examples-grid">
-                <div class="example-card">
-                    <div class="example-img">Screenshot Coming Soon</div>
-                    <div class="example-content">
-                        <h3>Elite Roofing MN</h3>
-                        <a href="#">minneapolis-roofing-example.vercel.app</a>
-                        <p>"Clean, professional look that builds trust with homeowners looking for quality roofing services."</p>
-                    </div>
-                </div>
-                <div class="example-card">
-                    <div class="example-img">Screenshot Coming Soon</div>
-                    <div class="example-content">
-                        <h3>GreenScape Lawn Care</h3>
-                        <a href="#">landscaping-example.vercel.app</a>
-                        <p>"Shows off your work with a beautiful gallery that makes potential customers want to call."</p>
-                    </div>
-                </div>
-                <div class="example-card">
-                    <div class="example-img">Screenshot Coming Soon</div>
-                    <div class="example-content">
-                        <h3>Comfort HVAC Solutions</h3>
-                        <a href="#">hvac-example.vercel.app</a>
-                        <p>"Makes it easy for customers to contact you with multiple ways to get in touch."</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container">
-            <h2>Common Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h3>How long does it really take?</h3>
-                    <p>48 hours from when you submit the form to when you get your first draft. One round of revisions is included.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need to provide anything?</h3>
-                    <p>Just fill out our form. We'll handle the content, images, and design. If you have specific photos or content, great—but it's not required.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What if I don't like it?</h3>
-                    <p>One round of revisions is included. We'll make changes until you're happy.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do I need to know how to code?</h3>
-                    <p>Nope. We deliver a ready-to-go website. You just need to be able to click a link.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What about hosting?</h3>
-                    <p>We'll show you how to host for free on Vercel (we'll walk you through it). Or you can host anywhere you want.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I update it myself later?</h3>
-                    <p>The sites are built simple on purpose. We can show you how to make basic updates, or we offer update services for $100/update.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2>Ready to Get Your Business Online?</h2>
-            <p>Join dozens of local contractors who got their website done in 48 hours instead of 48 days.</p>
-            <a href="https://tally.so/r/D4qvQp" class="cta-button">Get Your Website for $750 →</a>
-            <div class="trust-line">Money-back guarantee if you're not satisfied</div>
-        </div>
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>ready to get your business online?</h2>
+        <a href="#" class="cta-btn" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});">get started →</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="logo" style="margin-bottom: 10px;">WebSimple AI</div>
-            <p>Simple websites for local contractors</p>
-            <p style="margin-top: 10px;">Contact: <a href="mailto:bganje@gmail.com">bganje@gmail.com</a></p>
-            <p style="margin-top: 20px; font-size: 14px;">© 2024 WebSimple AI. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">websimpleai</div>
+            <div class="footer-links">
+                <a href="#examples" class="footer-link">examples</a>
+                <a href="#" class="footer-link">pricing</a>
+                <a href="mailto:hello@websimple.ai" class="footer-link">contact</a>
+            </div>
         </div>
     </footer>
+
+    <!-- Tally Embed Script -->
+    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
 </body>
 </html>
