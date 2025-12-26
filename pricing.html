@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WebSimple AI Pricing - Professional websites for small businesses starting at $49/month.">
+    <title>pricing - websimple ai</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --black: #000000;
+            --white: #ffffff;
+            --gray: #666666;
+            --light-gray: #f5f5f5;
+            --border: #e0e0e0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--black);
+            background: var(--white);
+        }
+        
+        /* Header */
+        header {
+            padding: 2rem 5%;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--black);
+            text-transform: lowercase;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            font-weight: 300;
+        }
+        
+        .nav-link {
+            color: var(--black);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 0.5rem 1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-link:hover {
+            opacity: 0.6;
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 100px 5% 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-transform: lowercase;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Pricing Grid */
+        .pricing-section {
+            padding: 60px 5% 120px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid var(--black);
+            position: relative;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--black);
+            color: var(--white);
+            padding: 0.3rem 1rem;
+            font-size: 0.75rem;
+            text-transform: lowercase;
+            border-radius: 20px;
+        }
+        
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-transform: lowercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-description {
+            font-size: 0.95rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            margin-bottom: 2rem;
+            min-height: 45px;
+        }
+        
+        .plan-setup {
+            font-size: 0.9rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .plan-price {
+            font-size: 4rem;
+            font-weight: 600;
+            line-height: 1;
+            margin-bottom: 0.25rem;
+        }
+        
+        .plan-price span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--gray);
+        }
+        
+        .plan-period {
+            font-size: 1rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            margin-bottom: 2.5rem;
+        }
+        
+        .plan-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2.5rem;
+        }
+        
+        .plan-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            font-size: 0.95rem;
+            text-transform: lowercase;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-features li::before {
+            content: "✓";
+            color: var(--black);
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+        
+        .plan-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            text-transform: lowercase;
+        }
+        
+        .plan-btn:hover {
+            opacity: 0.8;
+        }
+        
+        .plan-btn.outline {
+            background: var(--white);
+            color: var(--black);
+            border: 1px solid var(--black);
+        }
+        
+        .plan-btn.outline:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        /* What's Included Section */
+        .included-section {
+            padding: 100px 5%;
+            background: var(--light-gray);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-align: center;
+            text-transform: lowercase;
+            margin-bottom: 4rem;
+        }
+        
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .included-item {
+            text-align: center;
+        }
+        
+        .included-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .included-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-transform: lowercase;
+            margin-bottom: 0.5rem;
+        }
+        
+        .included-item p {
+            font-size: 0.95rem;
+            color: var(--gray);
+            text-transform: lowercase;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 5%;
+        }
+        
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 2rem 0;
+        }
+        
+        .faq-item:first-child {
+            border-top: 1px solid var(--border);
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: 500;
+            text-transform: lowercase;
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer {
+            font-size: 1rem;
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 5%;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+            text-transform: lowercase;
+        }
+        
+        .cta-btn:hover {
+            opacity: 0.8;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: lowercase;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .footer-link {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            text-transform: lowercase;
+        }
+        
+        .footer-link:hover {
+            color: var(--black);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 900px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+            
+            .pricing-card.featured {
+                order: -1;
+            }
+            
+            .included-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .plan-price {
+                font-size: 3rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="/" class="logo">websimple<span>ai</span></a>
+            <a href="/#examples" class="nav-link">examples</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>simple pricing. no surprises.</h1>
+        <p>professional websites for small businesses. built in 24 hours, hosted forever.</p>
+    </section>
+
+    <!-- Pricing Grid -->
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <!-- Starter -->
+            <div class="pricing-card">
+                <div class="plan-name">starter</div>
+                <div class="plan-description">for businesses that need to look legit online</div>
+                <div class="plan-setup">$99 setup fee</div>
+                <div class="plan-price">$49<span>/mo</span></div>
+                <div class="plan-period">billed monthly</div>
+                <ul class="plan-features">
+                    <li>one-page website</li>
+                    <li>mobile responsive design</li>
+                    <li>SEO optimized</li>
+                    <li>SSL security included</li>
+                    <li>lead capture form</li>
+                    <li>click-to-call phone link</li>
+                    <li>hosting included</li>
+                    <li>3 updates per year</li>
+                    <li>live in 24-48 hours</li>
+                </ul>
+                <a href="/" class="plan-btn outline">get started →</a>
+            </div>
+            
+            <!-- Pro -->
+            <div class="pricing-card featured">
+                <div class="featured-badge">most popular</div>
+                <div class="plan-name">pro</div>
+                <div class="plan-description">for businesses ready to rank on google</div>
+                <div class="plan-setup">$149 setup fee</div>
+                <div class="plan-price">$99<span>/mo</span></div>
+                <div class="plan-period">billed monthly</div>
+                <ul class="plan-features">
+                    <li>everything in starter</li>
+                    <li>3 pages (home, about, blog)</li>
+                    <li>monthly AI blog post for SEO</li>
+                    <li>google business profile setup</li>
+                    <li>image gallery or portfolio</li>
+                    <li>extended about page</li>
+                    <li>3 updates per year</li>
+                </ul>
+                <a href="/" class="plan-btn">get started →</a>
+            </div>
+            
+            <!-- Enterprise -->
+            <div class="pricing-card">
+                <div class="plan-name">enterprise</div>
+                <div class="plan-description">for businesses with multiple locations</div>
+                <div class="plan-setup">$499 setup fee</div>
+                <div class="plan-price">$199<span>/mo</span></div>
+                <div class="plan-period">billed monthly</div>
+                <ul class="plan-features">
+                    <li>everything in pro</li>
+                    <li>up to 3 locations</li>
+                    <li>dedicated page per location</li>
+                    <li>localized SEO per location</li>
+                    <li>monthly AI blog post per location</li>
+                    <li>priority support</li>
+                    <li>custom intake forms</li>
+                </ul>
+                <a href="/" class="plan-btn outline">get started →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="included-section">
+        <h2 class="section-title">every plan includes</h2>
+        <p class="section-subtitle">no hidden fees. no gotchas.</p>
+        
+        <div class="included-grid">
+            <div class="included-item">
+                <div class="included-icon">⚡</div>
+                <h3>lightning fast hosting</h3>
+                <p>your site loads in under 1 second</p>
+            </div>
+            
+            <div class="included-item">
+                <div class="included-icon">🔒</div>
+                <h3>SSL security</h3>
+                <p>encrypted and secure from day one</p>
+            </div>
+            
+            <div class="included-item">
+                <div class="included-icon">📱</div>
+                <h3>mobile responsive</h3>
+                <p>looks perfect on every device</p>
+            </div>
+            
+            <div class="included-item">
+                <div class="included-icon">🔍</div>
+                <h3>SEO optimized</h3>
+                <p>built to rank on google</p>
+            </div>
+            
+            <div class="included-item">
+                <div class="included-icon">📧</div>
+                <h3>lead capture</h3>
+                <p>turn visitors into customers</p>
+            </div>
+            
+            <div class="included-item">
+                <div class="included-icon">🚀</div>
+                <h3>24-48 hour delivery</h3>
+                <p>your site, live, fast</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <h2 class="section-title">questions? answers.</h2>
+        
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">what counts as an "update"?</div>
+                <div class="faq-answer">An update is a small change like swapping a photo, updating your phone number, or fixing a typo. It's not a redesign or adding new pages. Need more than 3 updates per year? Additional updates are $25 each.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">do i need to provide content?</div>
+                <div class="faq-answer">Nope. Just tell us about your business and we'll write everything. You can request changes if something doesn't sound right.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">what about my domain?</div>
+                <div class="faq-answer">If you already have a domain, we'll connect it. If not, we can help you get one (domains are typically $10-15/year, paid separately).</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">can i cancel anytime?</div>
+                <div class="faq-answer">Yes. No contracts, no cancellation fees. If you cancel, your site goes offline at the end of your billing period.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">what if i need more than 3 locations?</div>
+                <div class="faq-answer">Get in touch. We'll work out custom pricing for larger multi-location businesses.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">how does the AI blog post work?</div>
+                <div class="faq-answer">Each month, we generate a relevant blog post for your industry—think "5 signs you need a new water heater" or "how to prepare your home for winter." It helps you rank on Google over time.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>ready to get started?</h2>
+        <p>tell us about your business. we'll have a preview in your inbox within 24 hours.</p>
+        <a href="/" class="cta-btn">get my website →</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">websimpleai</div>
+            <div class="footer-links">
+                <a href="/#examples" class="footer-link">examples</a>
+                <a href="/pricing.html" class="footer-link">pricing</a>
+                <a href="mailto:hello@websimple.ai" class="footer-link">contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
