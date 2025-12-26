@@ -47,10 +47,16 @@
             font-weight: 600;
             color: var(--black);
             text-transform: lowercase;
+            text-decoration: none;
         }
         
         .logo span {
             font-weight: 300;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 0.5rem;
         }
         
         .nav-link {
@@ -102,6 +108,24 @@
             font-weight: 500;
             margin-bottom: 1rem;
             text-transform: lowercase;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Blinking cursor animation */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            height: 1.1rem;
+            background-color: var(--black);
+            margin-left: 0.25rem;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
         
         /* Trust Section */
@@ -191,10 +215,50 @@
             text-transform: lowercase;
         }
         
+        /* Why Website Section */
+        .why-section {
+            padding: 120px 5%;
+            background: var(--light-gray);
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .why-item {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 8px;
+        }
+        
+        .why-stat {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            line-height: 1;
+        }
+        
+        .why-text {
+            font-size: 1.1rem;
+            color: var(--gray);
+            text-transform: lowercase;
+            line-height: 1.5;
+        }
+        
+        .why-source {
+            font-size: 0.8rem;
+            color: var(--border);
+            margin-top: 0.75rem;
+            text-transform: lowercase;
+        }
+
         /* Features Section */
         .features-section {
             padding: 120px 5%;
-            background: var(--light-gray);
         }
         
         .section-title {
@@ -244,6 +308,7 @@
         /* Portfolio Section */
         .portfolio-section {
             padding: 120px 5%;
+            background: var(--light-gray);
         }
         
         .portfolio-grid {
@@ -259,6 +324,7 @@
             border-radius: 8px;
             overflow: hidden;
             transition: transform 0.3s;
+            background: var(--white);
         }
         
         .portfolio-item:hover {
@@ -295,7 +361,6 @@
         /* Testimonials */
         .testimonials-section {
             padding: 120px 5%;
-            background: var(--light-gray);
         }
         
         .testimonial-item {
@@ -405,6 +470,14 @@
                 font-size: 3.5rem;
             }
             
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-stat {
+                font-size: 2.5rem;
+            }
+            
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
@@ -434,8 +507,11 @@
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">websimple<span>ai</span></div>
-            <a href="#examples" class="nav-link">examples</a>
+            <a href="/" class="logo">websimple<span>ai</span></a>
+            <div class="nav-links">
+                <a href="#examples" class="nav-link">examples</a>
+                <a href="/pricing.html" class="nav-link">pricing</a>
+            </div>
         </nav>
     </header>
 
@@ -444,7 +520,7 @@
         <h1>your business deserves a <strong>real website</strong>. get one in 24 hours.</h1>
         
         <div class="chat-box">
-            <div class="chat-header">💬 get started</div>
+            <div class="chat-header">💬 get started<span class="cursor"></span></div>
             <iframe data-tally-src="https://tally.so/embed/zxNoDq?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="234" frameborder="0" marginheight="0" marginwidth="0" title="websites built fast"></iframe>
         </div>
     </section>
@@ -496,6 +572,37 @@
             <div class="stat-item">
                 <div class="stat-number">100%</div>
                 <div class="stat-label">mobile responsive</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why You Need a Website -->
+    <section class="why-section">
+        <h2 class="section-title">why you need a website</h2>
+        
+        <div class="why-grid">
+            <div class="why-item">
+                <div class="why-stat">81%</div>
+                <div class="why-text">of customers research online before buying — if you're not online, they can't find you</div>
+                <div class="why-source">network solutions</div>
+            </div>
+            
+            <div class="why-item">
+                <div class="why-stat">84%</div>
+                <div class="why-text">of consumers say a business with a website is more credible than one with only social media</div>
+                <div class="why-source">network solutions</div>
+            </div>
+            
+            <div class="why-item">
+                <div class="why-stat">75%</div>
+                <div class="why-text">of people judge a business's credibility based on its website design</div>
+                <div class="why-source">businessdasher</div>
+            </div>
+            
+            <div class="why-item">
+                <div class="why-stat">31%</div>
+                <div class="why-text">of shoppers won't buy from a small business that doesn't have a website</div>
+                <div class="why-source">digital silk</div>
             </div>
         </div>
     </section>
@@ -615,7 +722,7 @@
             <div class="footer-logo">websimpleai</div>
             <div class="footer-links">
                 <a href="#examples" class="footer-link">examples</a>
-                <a href="#" class="footer-link">pricing</a>
+                <a href="/pricing.html" class="footer-link">pricing</a>
                 <a href="mailto:hello@websimple.ai" class="footer-link">contact</a>
             </div>
         </div>
