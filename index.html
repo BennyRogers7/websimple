@@ -318,18 +318,24 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .portfolio-item {
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-            background: var(--white);
-        }
-        
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-        }
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+a.portfolio-item {
+    text-decoration: none;
+    color: inherit;
+}
+
+
         
         .portfolio-image {
             width: 100%;
@@ -662,36 +668,37 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="examples" class="portfolio-section">
-        <h2 class="section-title">see what we've built</h2>
-        
+<!-- Portfolio -->
+<section id="examples" class="portfolio-section">
+    <h2 class="section-title">see what we've built</h2>
+    
+    <div class="portfolio-grid">
         <a href="https://bennyrogers7.github.io/web-simple-examples/skulski-builders.html" target="_blank" class="portfolio-item">
-    <div class="portfolio-image">🏗️</div>
-    <div class="portfolio-info">
-        <h3>skulski & sons builders</h3>
-        <p>construction & remodeling</p>
+            <div class="portfolio-image">🏗️</div>
+            <div class="portfolio-info">
+                <h3>skulski & sons builders</h3>
+                <p>construction & remodeling</p>
+            </div>
+        </a>
+        
+        <a href="https://bennyrogers7.github.io/web-simple-examples/northland-electric.html" target="_blank" class="portfolio-item">
+            <div class="portfolio-image">⚡</div>
+            <div class="portfolio-info">
+                <h3>northland electric</h3>
+                <p>electrical services</p>
+            </div>
+        </a>
+        
+        <a href="https://bennyrogers7.github.io/web-simple-examples/flowright-plumbing.html" target="_blank" class="portfolio-item">
+            <div class="portfolio-image">🔧</div>
+            <div class="portfolio-info">
+                <h3>flowright plumbing</h3>
+                <p>plumbing services</p>
+            </div>
+        </a>
     </div>
-</a>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">⚡</div>
-                <div class="portfolio-info">
-                    <h3>coming soon</h3>
-                    <p>electrical services</p>
-                </div>
-            </div>
-            
-            <div class="portfolio-item">
-                <div class="portfolio-image">🔧</div>
-                <div class="portfolio-info">
-                    <h3>coming soon</h3>
-                    <p>plumbing services</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+</section>
+    
     <!-- Testimonials -->
     <section class="testimonials-section">
         <div class="testimonial-item">
